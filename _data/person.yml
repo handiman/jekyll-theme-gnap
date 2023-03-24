@@ -1,0 +1,19 @@
+# Naming according to https://schema.org Person
+name: Papa Smurf
+givenName: Papa
+familyName: Smurf
+description: >-
+  Papa Smurf 
+  is a smurf
+nationality: Smurfified
+telephone: 123456789
+email: papa@smurf
+birthDate: 1970-01-01
+url: https://papa.smurf
+jobTitle: Smurf extraordinaire
+workLocation: Smurfified
+worksFor:
+  name: Smurfified
+  url: https://papa.smurf
+sameAs: 
+  - https://papa.smurf

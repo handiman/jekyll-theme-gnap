@@ -1,0 +1,17 @@
+{% assign certificates = site.certs %}{% if certificates %}
+<section id="certificates" class="valign-wrapper">
+  <div class="container">
+    <h2>Certificates</h2>
+    <ul>
+    {% for cert in certificates %}
+      <li>
+        <h4>{{ cert.title }}</h4>
+        <div class="caption">
+          {% if cert.issuer %}{{ cert.issuer }} | {% endif %}
+          {% if cert.achievement_date %}{{ cert.achievement_date }}{% endif %}
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>{% assign certificates = nil %}{% endif %}

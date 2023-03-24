@@ -1,0 +1,10 @@
+<header class="valign-wrapper grey darken-4 white-text">{% assign person = site.data.person %}
+    <div class="container">
+        <div class="no-print">Hi, I'm</div>
+        <h1>{% if person.name %}{{ person.name }}{% else %}{{ site.author.name }}{% endif %}</h1>
+        <h4 class="job-title" id="job-title">{{ person.jobTitle }}</h4>
+        <div class="no-print">You'll like me</div>
+        <div class="print"><i class="fas fa-globe"></i> {{ site.url | absolute_url }}</div>
+        {% if person.telephone %}<div class="print"><i class="fas fa-phone"></i> {{ person.telephone }}</div>{% endif %}
+    </div>
+</header>{% assign person = nil %}

@@ -1,0 +1,7 @@
+{% assign organization = site.data.organization %}{ 
+  "@context": "http://schema.org", 
+  "@type": "Organization"{% if organization.name %},
+  "name": {{ organization.name | jsonify }}{% endif %}{% if organization.url %},
+  "url": {{ organization.url | jsonify }}{% endif %}{% if organization.vatId %},
+  "vatId": {{ organization.vatId | jsonify }}{% endif %}
+}{% assign organization = nil %}

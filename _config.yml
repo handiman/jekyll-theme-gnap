@@ -1,0 +1,44 @@
+title: GNAP!
+description: Theme for GitHub pages 
+permalink: pretty
+sass:
+ sass_dir: _sass
+ style: compressed
+excerpt_separator: <!--more-->
+plugins:
+ - jekyll-sitemap
+ - jekyll-seo-tag
+exclude:
+  - LICENSE
+  - README.md 
+  - node_modules
+  - "Gemfile*"
+  - "*.gemspec"
+collections:
+ projects:
+  output: false
+ employment:
+  output: false
+ certs:
+  output: false
+defaults:
+ - scope: 
+    path: "index.md"
+   values: 
+    layout: index
+ - scope: 
+    path: "index.html"
+   values: 
+    layout: index
+ - scope: 
+    path: ""
+    type: pages
+   values: 
+    layout: page
+ - scope:
+    path: "_posts"
+    type: posts
+   values:
+    layout: post
+
+

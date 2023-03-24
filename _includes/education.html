@@ -1,0 +1,14 @@
+<section id="education" class="valign-wrapper">
+  <div class="container">
+    <h2>Education</h2>
+    <ul>{% for education in site.data.profile.education reversed %}
+      <li>
+        <h4>{{education.school}}</h4>
+        <div class="caption">
+          {% if education.description %}{{ education.description }} | {% endif %}
+          {% if education.start_year %}{{ education.start_year }}{% endif %} - {% if education.end_year %}{{ education.end_year }}{% else %}present{% endif %}
+        </div>
+      </li>{% endfor %}
+    </ul>
+  </div>
+</section>

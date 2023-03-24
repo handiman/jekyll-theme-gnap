@@ -1,0 +1,9 @@
+"White Magic":
+  - name: Spells
+    level: Expert
+
+Potions:
+  - name: Healing
+    level: Expert
+  - name: Black Smurf Reversal
+    level: Advanced

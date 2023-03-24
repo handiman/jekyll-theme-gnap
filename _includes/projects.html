@@ -1,0 +1,35 @@
+<section id="projects" class="valign-wrapper">
+  <div class="container">
+    <h2>Featured Projects</h2>
+    <ul class="row">
+      {% for featuredProject in site.data.profile.featuredProjects %}
+        {% assign projectId = '/projects/' | append: featuredProject %}
+        {% assign project = site.projects | where: "id", projectId | first %}
+        {% if project %}
+          <li class="col s12 m6">
+            <h4>{{project.title}}</h4>
+            <div class="caption">
+              {% for role in project.roles %}{% if forloop.first %}{{ role }} | {% endif %}{% endfor %}
+              {{ project.start_date }} - {% if project.end_date %}{{ project.end_date }}{% else %}present{% endif %}
+            </div>
+            {% if project.summary %}
+              <ul>
+              {% for summary in project.summary %}
+                <li>{{ summary }}</li>
+              {% endfor %}
+              </ul>
+            {% else %}
+            <div>{{ project.excerpt }}</div>
+            {% endif %}
+            {% if project.skills %}
+              <div class="skills">
+                <div class="caption">Skills used:</div>
+                {{ project.skills | join: ', ' }}
+              </div>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>

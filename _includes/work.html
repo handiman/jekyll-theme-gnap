@@ -1,0 +1,25 @@
+<section id="work" class="valign-wrapper">
+  <div class="container">
+    <h2>Work Experience</h2>
+    <ul>
+      {% for employment in site.employment reversed %}
+      <li>
+        <h4>{{ employment.organization.name }}</h4>
+        <div class="caption">
+          <span>{{ employment.role }}</span> |
+          <time datetime="{{employment.start_date}}">{{employment.start_date}}</time> - {% if employment.end_date %}<time datetime="{{employment.end_date}}">{{employment.end_date}}</time>{% else %}<time datetime="{{site.time}}">present</time>{% endif %}
+        </div>
+          {% if employment.summary %}
+          <ul>
+          {% for summary in employment.summary %}
+            <li>{{ summary }}</li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <div>{{ employment.excerpt }}</div>
+          {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
