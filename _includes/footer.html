@@ -2,7 +2,7 @@
   <div class="container">
     {% comment %}{{> contact-form}}{% endcomment %}
     <ul class="row center inline">{% for cert in site.certs %}
-      <li><a title="{{ cert.title }}"href="cert.link" ><img class="badge" src="{{ cert.badge }}" alt="{{ cert.title }}" /></a></li>{% endfor %}
+      <li><a title="{{ cert.title }}"href="{{ cert.link }}" ><img class="badge" src="{{ cert.badge }}" alt="{{ cert.title }}" /></a></li>{% endfor %}
     </ul>
     <ul class="row center inline inline-delimited">
       <li><a href="#basics">Top of page</a></li>
