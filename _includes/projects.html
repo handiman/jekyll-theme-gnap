@@ -12,14 +12,13 @@
               {% for role in project.roles %}{% if forloop.first %}{{ role }} | {% endif %}{% endfor %}
               {{ project.start_date }} - {% if project.end_date %}{{ project.end_date }}{% else %}present{% endif %}
             </div>
+            <div>{{ project.excerpt }}</div>
             {% if project.summary %}
               <ul>
               {% for summary in project.summary %}
                 <li>{{ summary }}</li>
               {% endfor %}
               </ul>
-            {% else %}
-            <div>{{ project.excerpt }}</div>
             {% endif %}
             {% if project.skills %}
               <div class="skills">
