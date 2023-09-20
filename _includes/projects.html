@@ -13,7 +13,6 @@
               {{ project.start_date }} - {% if project.end_date %}{{ project.end_date }}{% else %}present{% endif %}
             </div>
             {% if project.summary %}
-              <div>{{ project.excerpt }}</div>
               <ul>
               {% for summary in project.summary %}
                 <li>{{ summary }}</li>
