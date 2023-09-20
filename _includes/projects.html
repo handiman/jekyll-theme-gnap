@@ -13,6 +13,7 @@
               {{ project.start_date }} - {% if project.end_date %}{{ project.end_date }}{% else %}present{% endif %}
             </div>
             {% if project.summary %}
+              <div>{{ project.excerpt }}</div>
               <ul>
               {% for summary in project.summary %}
                 <li>{{ summary }}</li>
@@ -20,13 +21,6 @@
               </ul>
             {% else %}
               <div>{{ project.excerpt }}</div>
-            {% endif %}
-            {% if project.highlights %}
-              <ul>
-              {% for highlight in project.highlights %}
-                <li>{{ highlight }}</li>
-              {% endfor %}
-              </ul>
             {% endif %}
             {% if project.skills %}
               <div class="skills">
