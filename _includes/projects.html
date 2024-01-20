@@ -9,9 +9,10 @@
           <li class="col s12 m6">
             <h4>{% if project.name %}{{ project.name }}{% else %}{{project.title}}{% endif %}</h4>
             <div class="caption">
-              {% for role in project.roles %}{% if forloop.first %}{{ role }} | {% endif %}{% endfor %}
-              {{ project.start_date }} - {% if project.end_date %}{{ project.end_date }}{% else %}present{% endif %}
-            </div>
+              <span>
+                {% if project.roles %}{{ project.roles | join: ", " }}{% else %}{{ project.role }}{% endif %} 
+              </span> | <time datetime="{{project.start_date}}">{{project.start_date}}</time> - {% if project.end_date %}<time datetime="{{project.end_date}}">{{project.end_date}}</time>{% else %}<time datetime="{{site.time}}">present</time>{% endif %}
+                </div>
             {% if project.summary %}
               <ul>
               {% for summary in project.summary %}

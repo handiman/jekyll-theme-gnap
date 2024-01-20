@@ -6,8 +6,9 @@
       <li>
         <h4>{{ employment.organization.name }}</h4>
         <div class="caption">
-          <span>{{ employment.role }}</span> |
-          <time datetime="{{employment.start_date}}">{{employment.start_date}}</time> - {% if employment.end_date %}<time datetime="{{employment.end_date}}">{{employment.end_date}}</time>{% else %}<time datetime="{{site.time}}">present</time>{% endif %}
+          <span>
+            {% if employment.roles %}{{ employment.roles | join: ", " }}{% else %}{{ employment.role }}{% endif %} 
+          </span> | <time datetime="{{employment.start_date}}">{{employment.start_date}}</time> - {% if employment.end_date %}<time datetime="{{employment.end_date}}">{{employment.end_date}}</time>{% else %}<time datetime="{{site.time}}">present</time>{% endif %}
         </div>
           {% if employment.summary %}
           <ul>
