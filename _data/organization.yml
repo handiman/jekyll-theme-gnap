@@ -1,4 +1,15 @@
 # Naming according to https://schema.org Organization
-name: John Doe Inc.
-url: https://john.doe
+name: Papa Smurf Inc.
+alternateName: Papa Smurf Ltd.
+description: Smurfing smurfs worldwide
 vatId: 1234567890
+url: https://papa.smurf
+sameAs: https://john.doe
+founder: 
+ name: Papa Smurf
+address:
+ streetAddress: Smurf Road 1
+ postalCode: 1234
+ addressLocality: Smurf Village
+ addressRegion: Smurf
+ addressCountry: Belgium
